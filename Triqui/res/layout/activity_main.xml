@@ -23,6 +23,11 @@ android:layout_width="fill_parent"
 android:layout_height="wrap_content"
 android:text="@string/new_game_label" />
 <Button
+android:id="@+id/best_scores_button"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:text="@string/best_scores_label" />
+<Button
 android:id="@+id/about_button"
 android:layout_width="fill_parent"
 android:layout_height="wrap_content"

@@ -13,23 +13,17 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.example.triqui.MainActivity"
-            android:label="@string/app_name" >
+        <activity android:name="com.example.triqui.MainActivity" android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.triqui.About"
-            android:label="@string/title_activity_about"
-            android:theme="@android:style/Theme.Dialog" >
+        <activity android:name="com.example.triqui.About" android:label="@string/title_activity_about" android:theme="@android:style/Theme.Dialog" >
         </activity>
-        <activity
-            android:name="com.example.triqui.Game"
-            android:label="@string/title_activity_game" >
+        <activity android:name="com.example.triqui.Game" android:label="@string/title_activity_game" >
+        </activity>
+        <activity android:name="com.example.triqui.Scores" android:label="@string/title_activity_scores" >
         </activity>
     </application>
 

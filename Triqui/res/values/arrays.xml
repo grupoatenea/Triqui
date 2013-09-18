@@ -8,7 +8,7 @@
  ! Visit http://www.pragmaticprogrammer.com/titles/eband3 for more book information.
 -->
 <resources>
-   <array name="difficulty">
+   <array name="players">
       <item>@string/x_label</item>
       <item>@string/o_label</item>
    </array>

@@ -6,11 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Game" >
+    tools:context=".Scores" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/main_title" />
-
+    <ListView android:id="@+id/listview_best_scores" android:layout_width="match_parent" android:layout_height="match_parent" />
 </RelativeLayout>

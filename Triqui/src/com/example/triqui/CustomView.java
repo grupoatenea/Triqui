@@ -3,13 +3,16 @@ package com.example.triqui;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.example.triqui.model.ListScores;
+import com.example.triqui.model.Score;
+import com.example.triqui.model.Triqui;
 
 
 public class CustomView  extends View{
@@ -27,8 +30,6 @@ public class CustomView  extends View{
 		Log.d("Context: ", context.getClass().getName());
 		//Log.d("Context: figura selecinada ", game.getFiguraSeleccionada());
 		builder= new AlertDialog.Builder(context);
-		
-		
 	}
 	
 	@Override
@@ -91,20 +92,19 @@ public class CustomView  extends View{
 		invalidate(); //Repinta
 		
 		
-		
 		if (triqui.getWinner() != null) 
-		{  
+		{
+			String player = "Ganador : " + triqui.getWinner();
+			String numberMoves = " en movimientos " + Integer.toString(triqui.getNumberMoves(triqui.getWinner()));
 			
+			new ListScores().getInstance().add(new Score(player, triqui.getNumberMoves(triqui.getWinner())));
 			
 			builder.setTitle(R.string.title_winner_game)
-	           .setMessage(getResources().getString(R.string.winner_game_message)+" "+triqui.getWinner()+"en moviemientos"+Integer.toString(triqui.getNumberMoves(triqui.getWinner())))
-	           
+	           .setMessage(player + numberMoves)
 	           .setPositiveButton(R.string.winner_pos_option, new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
-                       
                    }
                })
-               
 	           .show();
 		}
 		
